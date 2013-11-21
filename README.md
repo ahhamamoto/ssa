@@ -1,0 +1,4 @@
+ssa
+===
+
+Simple Steganography Application
