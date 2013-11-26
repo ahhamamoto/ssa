@@ -1,6 +1,27 @@
 #!/usr/bin/env python
 
 class SSA():
+	'''Class that encodes and decodes messages embeded in images.'''
+
+	def __init__(self):
+		'''Initializes lists with options and operations.'''
+		self.operations = ['encode', 'decode']
+		self.options = {
+			'encode': ['-s', '-f'],
+			'decode': ['-f']
+		}
+
+	def is_fit(self, string):
+		'''Checks if string ca fit in the image.'''
+
+		# each character have 1 byte (8 bits)
+		# string_lenght = len(string) * 8
+
+		# each pixel can have 3 bits of the message (RGB, 1 one bit each)
+		# fits_in_image = pixels * 3
+
+		# return string_lenght < fits_in_image
+		return True
 
 	def to_binary(self, c):
 		'''Takes a character and converts it to a string of 8 bits.'''
@@ -27,14 +48,24 @@ class SSA():
 			multiplyer = multiplyer * 2
 		return chr(value)
 
-	def encode(self, string):
+	def encode_to_string(self, string):
 		encoded = []
 		for c in string:
 			encoded.append(self.to_binary(c))
 		return encoded
 
-	def decode(self, bin):
+	def decode_from_string(self, bin):
 		decoded = []
 		for b in bin:
 			decoded.append(self.to_character(b))
 		return decoded
+
+	def encode(self):
+		'''Encode a string in an image.'''
+
+		return True
+
+	def decode(self):
+		'''Decodes a string from an image.'''
+
+		return True
