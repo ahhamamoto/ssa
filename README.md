@@ -1,11 +1,16 @@
 # Simple Steganography Application (SSA)
 
+## Table of Contents
+
+- [How to Use](#how-to-use)
+- [Usage Example](#usage-example)
+
 This application is a simple tool to hide a string
 in an image.
 
 It uses the images's RGB values to embed information within them.
 
-## How to use
+## How to Use ##
 
 To use put the string in a command line:
 
@@ -23,7 +28,7 @@ To dump the images content in another file:
 
 	python ssa decode "image_name" -f "file_name"
 
-## Usage example
+## Usage Example ##
 
 	python ssa encode "photo.png" -s "Hello, encoding image using SSA"
 	python ssa decode "photo.png"
