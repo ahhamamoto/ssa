@@ -1,14 +1,10 @@
 # Simple Steganography Application (SSA)
 
+
 ## Table of Contents
 
 - [How to Use](#how-to-use)
 - [Usage Example](#usage-example)
-
-This application is a simple tool to hide a string
-in an image.
-
-It uses the images's RGB values to embed information within them.
 
 ## How to Use ##
 
